@@ -3,6 +3,7 @@ const assignedTaskCount = document.getElementById("assigned__task");
 const taskbtnList = document.getElementsByClassName("task__btn");
 const activityLogList = document.getElementById("activity__log");
 const clearHistoryBtn = document.getElementById("clear__history");
+const boardDate = document.getElementById("board__date");
 
 for (const taskBtn of taskbtnList) {
   taskBtn.addEventListener("click", completeTask);
@@ -71,3 +72,17 @@ clearHistoryBtn.addEventListener("click", clearHistory);
 function clearHistory(e) {
   activityLogList.innerHTML = "";
 }
+
+const date = new Date();
+const formatedDate = date.toLocaleString("en-US", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+const week = formatedDate.split(",").shift();
+const today = formatedDate.split(",").slice(1);
+
+boardDate.innerText = today;
+boardDate.previousElementSibling.innerHTML = week;
