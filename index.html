@@ -32,7 +32,7 @@
       }
     </style>
   </head>
-  <body class="bg-[#F4F7FF] h-full pt-5 pb-10">
+  <body id="root" class="bg-[#F4F7FF] h-full pt-5 pb-10">
     <main class="container mx-auto">
       <!-- Header area -->
       <header
@@ -57,14 +57,23 @@
           <div
             class="flex items-center justify-around p-2 bg-[#F4F7FF] rounded-[50px] w-[90px]"
           >
-            <img class="w-6" src="./assets/checkbox.png" alt="" />
-            <span class="text-xl font-semibold">23</span>
+            <img
+              class="w-6"
+              src="./assets/checkbox.png"
+              alt="checkbox image"
+            />
+            <span id="completed__task" class="text-xl font-semibold">23</span>
           </div>
           <div>
             <button
+              id="toggle__theme"
               class="p-2 bg-[#F4F7FF] rounded-[50%] cursor-pointer"
             >
-              <img class="w-8" src="./assets/theme-btn.png" alt="" />
+              <img
+                class="w-8"
+                src="./assets/theme-btn.png"
+                alt="theme change btn"
+              />
             </button>
           </div>
         </div>
@@ -92,10 +101,11 @@
               </div>
               <div>
                 <h4 class="text-[#00303C]">Task Assigned</h4>
-                <span class="text-xl font-bold">05</span>
+                <span id="assigned__task" class="text-xl font-bold">05</span>
               </div>
             </div>
             <div
+              id="blog__cta"
               class="bg-gradient-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex items-center p-5 rounded-lg grow gap-x-4 cursor-pointer"
             >
               <img
@@ -154,7 +164,7 @@
                   </h4>
                 </div>
                 <div>
-                  <button class="btn text-white bg-[#3752FD]">
+                  <button class="btn text-white bg-[#3752FD] task__btn">
                     Complete
                   </button>
                 </div>
@@ -188,7 +198,7 @@
                 <div>
                   <button
                     disabled
-                    class="btn text-white bg-[#3752FD] disabled:!bg-[#3752FD]/20"
+                    class="btn text-white disabled:!bg-[#3752FD]/20 task__btn"
                   >
                     Complete
                   </button>
@@ -221,7 +231,7 @@
                   </h4>
                 </div>
                 <div>
-                  <button class="btn text-white bg-[#3752FD]">
+                  <button class="btn text-white bg-[#3752FD] task__btn">
                     Complete
                   </button>
                 </div>
@@ -253,7 +263,7 @@
                   </h4>
                 </div>
                 <div>
-                  <button class="btn text-white bg-[#3752FD]">
+                  <button class="btn text-white bg-[#3752FD] task__btn">
                     Complete
                   </button>
                 </div>
@@ -285,7 +295,7 @@
                   </h4>
                 </div>
                 <div>
-                  <button class="btn text-white bg-[#3752FD]">
+                  <button class="btn text-white bg-[#3752FD] task__btn">
                     Complete
                   </button>
                 </div>
@@ -317,7 +327,7 @@
                   </h4>
                 </div>
                 <div>
-                  <button class="btn text-white bg-[#3752FD]">
+                  <button class="btn text-white bg-[#3752FD] task__btn">
                     Complete
                   </button>
                 </div>
@@ -340,20 +350,13 @@
               <h3 class="text-lg">Activity Log</h3>
             </div>
             <div class="text-center mt-5">
-              <button class="btn bg-[#3752FD] text-white">
+              <button id="clear__history" class="btn bg-[#3752FD] text-white">
                 Clear History
               </button>
             </div>
           </div>
-          <div class="p-5 space-y-5">
+          <div id="activity__log" class="p-5 space-y-5">
             <div class="bg-[#F4F7FF] p-4 rounded-xl">
-              <p>
-                You have Complete The Task
-                <span class="font-semibold">Add Dark Mode</span> at
-                12:48:15 PM
-              </p>
-            </div>
-            <div class="bg-[#F4F7FF] p-3 rounded-xl">
               <p>
                 You have Complete The Task
                 <span class="font-semibold">Add Dark Mode</span> at
@@ -364,5 +367,8 @@
         </div>
       </section>
     </main>
+    <script src="./scripts/changeTheme.js"></script>
+    <script src="./scripts/navigate.js"></script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
