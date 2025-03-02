@@ -6,7 +6,113 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Document</title>
+    <title>Dev Board</title>
+    <!-- Tainwind css CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
   </head>
-  <body>Hello</body>
+  <body id="root" class="bg-[#F4F7FF] h-full pt-5 pb-10">
+    <main class="container mx-auto">
+      <header
+        class="bg-white flex justify-between items-center p-4 rounded-xl shadow shadow-[#000]/5"
+      >
+        <!-- Header logo area -->
+        <div>
+          <a href="#" class="flex items-center gap-x-2">
+            <img
+              class="w-10"
+              src="./assets/logo.png"
+              alt="header logo"
+            />
+            <h3 class="text-2xl text-[#00303C]">
+              Dev<span class="font-bold">Board</span>
+            </h3>
+          </a>
+        </div>
+
+        <!-- Header action area -->
+        <div class="flex items-center justify-between gap-x-5">
+          <div>
+            <button
+              id="back__btn"
+              class="btn text-white bg-[#3752FD]"
+            >
+              Back to Desk
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div>
+          <h1
+            class="text-center text-[#00303C] text-3xl font-bold my-10"
+          >
+            Blogs
+          </h1>
+        </div>
+        <div class="space-y-5">
+          <div class="bg-white p-5 rounded-lg">
+            <div
+              class="pb-4 border-b-2 border-dashed border-[#3752FD]/20"
+            >
+              <h2 class="text-[#00303C] text-xl font-semibold">
+                Question-1: What are the different ways to select an
+                element in dom?
+              </h2>
+            </div>
+            <div>
+              <p class="mt-5">
+                There are different ways to select element in dom.
+                Example: tag selector, class selector, id selector,
+                css query selector ect. Among them class, id and query
+                selectors are commonly used most ofter
+              </p>
+            </div>
+          </div>
+          <div class="bg-white p-5 rounded-lg">
+            <div
+              class="pb-4 border-b-2 border-dashed border-[#3752FD]/20"
+            >
+              <h2 class="text-[#00303C] text-xl font-semibold">
+                Question-1: What are the different ways to select an
+                element in dom?
+              </h2>
+            </div>
+            <div>
+              <p class="mt-5">
+                There are different ways to select element in dom.
+                Example: tag selector, class selector, id selector,
+                css query selector ect. Among them class, id and query
+                selectors are commonly used most ofter
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/navigate.js"></script>
+  </body>
 </html>
